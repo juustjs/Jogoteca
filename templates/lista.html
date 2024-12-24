@@ -14,18 +14,20 @@
          <thead class="thead-default">
             <tr>
                <th>Nome</th>
+               <th>categoria</th>
+               <th>Console</th>
             </tr>
         </thead>
         <tbody>
+         <!--Criando uma função for no html usando python-->
+           {% for jogo in jogos %}
            <tr>
-              <td>{{Jogo1}}</td>
+              <td>{{jogo._nome}}</td>
+              <td>{{jogo._categoria}}</td>
+              <td>{{jogo._console}}</td>
            </tr>
-           <tr>
-               <td>{{Jogo2}}</td>
-           </tr>
-           <tr>
-               <td>{{jogo3}}</td>
-           </tr>
+           {% endfor %}
+
         </tbody>
      </table>
   </div>
