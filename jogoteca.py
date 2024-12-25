@@ -1,8 +1,10 @@
 #importando o Flask 
 #importando render template para gerenciar com html
+#importando o redirect para redirecionar rotas
 from flask import Flask
 from flask import render_template
 from flask import request
+from flask import redirect
 
 #criando uma classe 
 class Jogo:
@@ -38,7 +40,7 @@ def criar ():
     console = request.form['console']
     jogo =  Jogo(nome, categoria, console)
     lista.append(jogo)
-    return render_template('lista.html', titulo='Jogos', jogos=lista)
+    return redirect('/')
 
 #rodando a aplicação
 #ativando o debug
